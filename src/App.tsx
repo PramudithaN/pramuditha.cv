@@ -216,9 +216,12 @@ function App() {
 
           {/* Section: Professional Summary */}
           <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-1.5' : 'text-sm md:text-base mb-4'}`}>
-              Professional Summary
-            </h3>
+            <div className={isDownloading ? 'mb-2' : 'mb-4'}>
+              <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider leading-none ${isDownloading ? 'text-[11px]' : 'text-sm md:text-base'}`}>
+                Professional Summary
+              </h3>
+              <div className={`w-full bg-blue-100 ${isDownloading ? 'h-[1.5px] mt-1.5' : 'h-[2px] mt-2'}`} />
+            </div>
             <p className={`text-black text-justify ${isDownloading ? 'text-[10px] leading-snug' : 'text-sm md:text-base leading-relaxed'}`}>
               {personalInfo.intro}
             </p>
@@ -226,9 +229,12 @@ function App() {
 
           {/* Section: Technical Skills */}
           <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-1.5' : 'text-sm md:text-base mb-4'}`}>
-              Technical Skills
-            </h3>
+            <div className={isDownloading ? 'mb-2' : 'mb-4'}>
+              <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider leading-none ${isDownloading ? 'text-[11px]' : 'text-sm md:text-base'}`}>
+                Technical Skills
+              </h3>
+              <div className={`w-full bg-blue-100 ${isDownloading ? 'h-[1.5px] mt-1.5' : 'h-[2px] mt-2'}`} />
+            </div>
             <ul className={isDownloading ? 'space-y-0.5' : 'space-y-2'}>
               {technicalSkills.map((skill, index) => (
                 <li key={index} className={`text-black flex items-start ${isDownloading ? 'text-[10px] leading-tight' : 'text-sm md:text-base'}`}>
@@ -243,9 +249,12 @@ function App() {
 
           {/* Section: Professional Experience */}
           <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-2' : 'text-sm md:text-base mb-5'}`}>
-              Professional Experience
-            </h3>
+            <div className={isDownloading ? 'mb-2' : 'mb-4'}>
+              <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider leading-none ${isDownloading ? 'text-[11px]' : 'text-sm md:text-base'}`}>
+                Professional Experience
+              </h3>
+              <div className={`w-full bg-blue-100 ${isDownloading ? 'h-[1.5px] mt-1.5' : 'h-[2px] mt-2'}`} />
+            </div>
             <div className={isDownloading ? 'space-y-3' : 'space-y-6'}>
               {experience.map((exp, index) => (
                 <div key={index}>
@@ -272,9 +281,12 @@ function App() {
 
           {/* Section: Selected Projects & Research */}
           <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-2' : 'text-sm md:text-base mb-5'}`}>
-              Selected Projects & Research
-            </h3>
+            <div className={isDownloading ? 'mb-2' : 'mb-4'}>
+              <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider leading-none ${isDownloading ? 'text-[11px]' : 'text-sm md:text-base'}`}>
+                Selected Projects & Research
+              </h3>
+              <div className={`w-full bg-blue-100 ${isDownloading ? 'h-[1.5px] mt-1.5' : 'h-[2px] mt-2'}`} />
+            </div>
             <div className={isDownloading ? 'space-y-3' : 'space-y-6'}>
               {projects.map((project, index) => (
                 <div key={index}>
@@ -300,9 +312,12 @@ function App() {
 
           {/* Section: Education */}
           <section>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-1.5' : 'text-sm md:text-base mb-4'}`}>
-              Education
-            </h3>
+            <div className={isDownloading ? 'mb-1.5' : 'mb-4'}>
+              <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider leading-none ${isDownloading ? 'text-[11px]' : 'text-sm md:text-base'}`}>
+                Education
+              </h3>
+              <div className={`w-full bg-blue-100 ${isDownloading ? 'h-[1.5px] mt-1.5' : 'h-[2px] mt-2'}`} />
+            </div>
             {education.map((edu, index) => (
               <div key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                 <div>
