@@ -4,6 +4,7 @@ import { defaultCVData } from "../data/defaultCV";
 import { Octokit } from "@octokit/rest";
 
 const STORAGE_KEY = "pramuditha_cv_custom_data_v2";
+const GITHUB_RAW_URL = "https://raw.githubusercontent.com/PramudithaN/pramuditha.cv/main/src/data/cv-data.json";
 
 export function useCVData() {
   const [cvData, setCvData] = useState<CVData>(() => {
@@ -18,6 +19,50 @@ export function useCVData() {
     return defaultCVData;
   });
 
+  const [isLoadingRemote, setIsLoadingRemote] = useState(false);
+
+  // Automatically fetch the latest published data from GitHub on load
+  useEffect(() => {
+    let isMounted = true;
+
+    const fetchLatestFromGitHub = async () => {
+      setIsLoadingRemote(true);
+      try {
+        // Cache buster parameter ensures mobile & desktop always fetch the latest commit
+        const res = await fetch(`${GITHUB_RAW_URL}?t=${Date.now()}`, {
+          cache: "no-store",
+        });
+
+        if (res.ok) {
+          const remoteData = await res.json();
+          if (remoteData && remoteData.personalInfo && remoteData.technicalSkills) {
+            if (isMounted) {
+              setCvData(remoteData);
+              try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(remoteData));
+              } catch (err) {
+                console.error("Failed to save remote data to storage", err);
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.warn("Could not fetch remote CV data, using local/default.", err);
+      } finally {
+        if (isMounted) {
+          setIsLoadingRemote(false);
+        }
+      }
+    };
+
+    fetchLatestFromGitHub();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  // Save changes locally in browser
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(cvData));
@@ -107,7 +152,7 @@ export function useCVData() {
         sha,
       });
 
-      return { success: true, message: "Successfully synced to GitHub repository!" };
+      return { success: true, message: "Successfully synced to GitHub! All devices will now see this update." };
     } catch (err: any) {
       console.error("GitHub Sync error:", err);
       return { success: false, message: err.message || "Failed to commit changes to GitHub" };
@@ -116,6 +161,7 @@ export function useCVData() {
 
   return {
     cvData,
+    isLoadingRemote,
     updateCVData,
     resetToDefaults,
     exportJSON,
