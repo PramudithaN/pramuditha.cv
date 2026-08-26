@@ -2,7 +2,7 @@
   "name": "pramuditha_cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://PramudithaN.github.io/pramuditha_cv",
+  "homepage": "https://pramudithan.github.io/pramuditha.cv",
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^21.1.1",

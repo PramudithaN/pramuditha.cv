@@ -112,22 +112,22 @@ function App() {
         html2canvas(element, { 
           scale: 3, 
           useCORS: true,
-          windowWidth: 816, 
-          windowHeight: 1056,
+          windowWidth: 794, 
+          windowHeight: 1123,
           scrollY: 0,
           scrollX: 0
         }).then((canvas) => {
           const imgData = canvas.toDataURL("image/png");
-          const pdf = new jsPDF("p", "mm", "letter");
+          const pdf = new jsPDF("p", "mm", "a4");
           
-          const imgWidth = 215.9; 
-          const imgHeight = 279.4; 
+          const imgWidth = 210; 
+          const imgHeight = 297; 
           
           pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
 
           // Add interactive links on top of the image
           // Calculate scale factor from pixels to mm
-          const pxToMm = imgWidth / 816; // Based on windowWidth used in html2canvas
+          const pxToMm = imgWidth / 794; // Based on windowWidth used in html2canvas
           
           links.forEach(link => {
             pdf.link(
@@ -170,7 +170,7 @@ function App() {
             ? 'overflow-hidden rounded-none shadow-none' 
             : 'overflow-hidden rounded-2xl shadow-xl border border-slate-200'
         }`}
-        style={isDownloading ? { width: '816px', height: '1056px' } : { width: '100%', maxWidth: '850px' }}
+        style={isDownloading ? { width: '794px', height: '1123px' } : { width: '100%', maxWidth: '850px' }}
       >
         <div className={`${isDownloading ? 'px-10 py-8' : 'p-8 sm:p-10 md:p-12'} h-full flex flex-col`}>
           
@@ -215,8 +215,8 @@ function App() {
           </div>
 
           {/* Section: Professional Summary */}
-          <section className={isDownloading ? 'mb-4' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b border-blue-100 ${isDownloading ? 'text-[11px] mb-1.5 pb-0.5' : 'text-sm md:text-base mb-4 pb-1 border-b-2'}`}>
+          <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
+            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-1.5' : 'text-sm md:text-base mb-4'}`}>
               Professional Summary
             </h3>
             <p className={`text-black text-justify ${isDownloading ? 'text-[10px] leading-snug' : 'text-sm md:text-base leading-relaxed'}`}>
@@ -225,8 +225,8 @@ function App() {
           </section>
 
           {/* Section: Technical Skills */}
-          <section className={isDownloading ? 'mb-4' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b border-blue-100 ${isDownloading ? 'text-[11px] mb-1.5 pb-0.5' : 'text-sm md:text-base mb-4 pb-1 border-b-2'}`}>
+          <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
+            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-1.5' : 'text-sm md:text-base mb-4'}`}>
               Technical Skills
             </h3>
             <ul className={isDownloading ? 'space-y-0.5' : 'space-y-2'}>
@@ -242,8 +242,8 @@ function App() {
           </section>
 
           {/* Section: Professional Experience */}
-          <section className={isDownloading ? 'mb-4' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b border-blue-100 ${isDownloading ? 'text-[11px] mb-2 pb-0.5' : 'text-sm md:text-base mb-5 pb-1 border-b-2'}`}>
+          <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
+            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-2' : 'text-sm md:text-base mb-5'}`}>
               Professional Experience
             </h3>
             <div className={isDownloading ? 'space-y-3' : 'space-y-6'}>
@@ -271,8 +271,8 @@ function App() {
           </section>
 
           {/* Section: Selected Projects & Research */}
-          <section className={isDownloading ? 'mb-4' : 'mb-8'}>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b border-blue-100 ${isDownloading ? 'text-[11px] mb-2 pb-0.5' : 'text-sm md:text-base mb-5 pb-1 border-b-2'}`}>
+          <section className={isDownloading ? 'mb-3.5' : 'mb-8'}>
+            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-2' : 'text-sm md:text-base mb-5'}`}>
               Selected Projects & Research
             </h3>
             <div className={isDownloading ? 'space-y-3' : 'space-y-6'}>
@@ -300,7 +300,7 @@ function App() {
 
           {/* Section: Education */}
           <section>
-            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b border-blue-100 ${isDownloading ? 'text-[11px] mb-1.5 pb-0.5' : 'text-sm md:text-base mb-4 pb-1 border-b-2'}`}>
+            <h3 className={`font-bold text-[#2563eb] uppercase tracking-wider border-b-2 border-blue-100 pb-1 ${isDownloading ? 'text-[11px] mb-1.5' : 'text-sm md:text-base mb-4'}`}>
               Education
             </h3>
             {education.map((edu, index) => (
