@@ -7,7 +7,7 @@
     "github": "github.com/PramudithaN",
     "linkedin": "linkedin.com/in/pramuditha-nadun-612b1b204",
     "phone": "+94-713-052-556",
-    "address": "Nugegoda, Sri Lanka",
+    "address": "63/9,Gallage Mawatha, Mirihana, Nugegoda",
     "image": "https://avatars.githubusercontent.com/u/79605208?v=4"
   },
   "technicalSkills": [
@@ -35,11 +35,6 @@
       "id": "skill-5",
       "category": "Data & Analytics",
       "skills": "XGBoost, GRU, ARIMA, Variational Mode Decomposition (VMD), FinBERT"
-    },
-    {
-      "id": "skill-1787724820510",
-      "category": "Test",
-      "skills": "Test, test"
     }
   ],
   "experience": [
