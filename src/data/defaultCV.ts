@@ -1,0 +1,81 @@
+import { CVData } from "../types/cv";
+
+export const defaultCVData: CVData = {
+  personalInfo: {
+    name: "PRAMUDITHA NADUN",
+    title: "ASSOCIATE SOFTWARE ENGINEER",
+    intro: "Associate Software Engineer with 5 years of combined academic and professional experience building scalable applications, highly interactive frontends, and robust backend systems. Specializing in React, TypeScript, and Spring Boot, with a strong foundation in UI/UX and visual design. Adept at bridging the gap between technical architecture and modern user experience, utilizing CI/CD pipelines to ensure seamless deployments. Proven experience in developing complex, data-driven architectures, distributed asynchronous systems, and predictive modeling algorithms.",
+    email: "pramudithanadun@gmail.com",
+    github: "github.com/PramudithaN",
+    linkedin: "linkedin.com/in/pramuditha-nadun-612b1b204",
+    phone: "+94-713-052-556",
+    address: "63/9,Gallage Mawatha, Mirihana, Nugegoda",
+    image: "https://avatars.githubusercontent.com/u/79605208?v=4",
+  },
+  technicalSkills: [
+    { id: "skill-1", category: "Frontend", skills: "React, TypeScript, JavaScript, React Hooks & Forms, Redux, Ant Design (AntD), HTML, CSS" },
+    { id: "skill-2", category: "Backend & Databases", skills: "Spring Boot, Java, FastAPI, Python, PostgreSQL, Oracle Forms, Jasper Reports" },
+    { id: "skill-3", category: "DevOps & Infrastructure", skills: "Docker, Git (commands & tagging), Jenkins, ArgoCD, Celery, Redis, AWS S3 / MinIO" },
+    { id: "skill-4", category: "Design & UI/UX", skills: "Figma, Wireframing, Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro, After Effects)" },
+    { id: "skill-5", category: "Data & Analytics", skills: "XGBoost, GRU, ARIMA, Variational Mode Decomposition (VMD), FinBERT" },
+  ],
+  experience: [
+    {
+      id: "exp-1",
+      role: "Associate Software Engineer (Fusion X Team)",
+      company: "LOLC Technologies",
+      period: "Hybrid | 2024 - Present",
+      description: [
+        "Develop and maintain enterprise-scale web applications using React and TypeScript, leveraging Redux for state management and Ant Design for modern, responsive UI components.",
+        "Architect and optimize backend functionalities using Spring Boot, ensuring efficient data processing, secure user access control, and precise screen permissions.",
+        "Streamline deployment lifecycles across QA, UAT, and Production environments by actively managing and monitoring CI/CD pipelines via Jenkins and ArgoCD.",
+        "Bridge technical and design workflows by conceptualizing and refining user interfaces in Figma, directly elevating the overall user experience and application usability.",
+      ],
+    },
+    {
+      id: "exp-2",
+      role: "Trainee Software Engineer (Fusion Team)",
+      company: "LOLC Technologies",
+      period: "Hybrid | Mar 2022 - Oct 2024",
+      description: [
+        "Engineered interactive frontend components and responsive layouts, collaborating with cross-functional teams to translate business requirements into functional software solutions.",
+        "Maintained and developed backend processes and reporting systems using Java and Oracle Forms.",
+        "Designed and generated complex, data-driven dashboards utilizing Jasper Reports to facilitate high-level business decision-making.",
+        "Contributed heavily to the UI/UX team, transforming user journeys into actionable Figma wireframes and high-fidelity designs.",
+      ],
+    },
+  ],
+  projects: [
+    {
+      id: "proj-1",
+      title: "11LabsM - Neural Voice Synthesizer & Translator",
+      repo: "https://github.com/PramudithaN/11labsM.git",
+      tech: "React, FastAPI, Celery, Redis, PostgreSQL, Docker",
+      description: [
+        "Architected a distributed full-stack platform that simultaneously translates and synthesizes speech into 17+ languages utilizing the ElevenLabs, DeepL, and Google APIs.",
+        "Orchestrated asynchronous background task processing using Celery and Redis to handle heavy text-to-speech workloads, providing users with real-time progress tracking.",
+        "Engineered a SHA-256 content-addressed caching mechanism and integrated scalable object storage (MinIO/AWS S3) to significantly minimize external API costs and reduce response latency.",
+        "Containerized the complete application infrastructure including the API, workers, cache, and database using Docker Compose for streamlined deployment.",
+      ],
+    },
+    {
+      id: "proj-2",
+      title: "Brent Crude Oil Forecasting System",
+      repo: "https://github.com/PramudithaN/petrocast-frontend.git",
+      tech: "Python, XGBoost, GRU, ARIMA, VMD",
+      description: [
+        "Engineered a leakage-free ensemble machine learning model to execute a 5-day price prediction horizon for the crude oil market.",
+        "Implemented Variational Mode Decomposition (VMD) to analyze and visualize non-linear frequency signals and Intrinsic Mode Functions (IMFs).",
+        "Integrated natural language processing via FinBERT, strictly utilizing event-driven, lagged news sentiment to eliminate forward-filling data leakage.",
+      ],
+    },
+  ],
+  education: [
+    {
+      id: "edu-1",
+      degree: "BSc (Hons) Software Engineering",
+      school: "University of Westminster, UK",
+      year: "Feb 2022 - 2026",
+    },
+  ],
+};

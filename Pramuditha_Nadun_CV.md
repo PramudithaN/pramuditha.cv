@@ -2,7 +2,7 @@
 
 <img src="public/cvImg.png" alt="Pramuditha Nadun" width="120" align="right" style="border-radius: 10px; margin-left: 20px;">
 
-**Address:** Nugegoda, Sri Lanka  
+**Address:** 63/9,Gallage Mawatha, Mirihana, Nugegoda 
 **Phone:** +94-713-052-556  
 **Email:** [pramudithanadun@gmail.com](mailto:pramudithanadun@gmail.com)  
 **GitHub:** [github.com/PramudithaN](https://github.com/PramudithaN)  
