@@ -24,6 +24,8 @@ This project is a modern, interactive CV platform built with **React 19** and **
 
 ## ✨ Features
 
+- 🔐 **Admin Management Panel** - In-browser and authenticated management of skills, experience, projects, and personal data.
+- 🔄 **Cloud & Local Sync** - Direct synchronization with GitHub and local JSON export/import.
 - 🚀 **Dynamic Profile** - Interactive presentation of professional experience and skills.
 - 🎨 **Modern UI/UX** - Clean, professional aesthetic built with Tailwind CSS.
 - 🌙 **Responsive Design** - Fully optimized for seamless viewing on mobile, tablet, and desktop.
@@ -48,7 +50,7 @@ This project is a modern, interactive CV platform built with **React 19** and **
 
 ## 📋 Prerequisites
 
-- [Node.js](https://nodejs.org/) **v16.18.0 or higher**
+- [Node.js](https://nodejs.org/) **v18.0.0 or higher**
 - [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
 - [Git](https://git-scm.com/)
 
@@ -83,23 +85,28 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 | Command | Description |
 |---------|-------------|
-| `npm start` | Runs the app in development mode. |
-| `npm run build` | Builds the app for production to the `build` folder. |
-| `npm test` | Launches the test runner. |
-| `npm run deploy` | Deploys the application to GitHub Pages. |
-| `npm run eject` | Removes the single build dependency from your project. |
+| `pnpm start` | Runs the app in development mode. |
+| `pnpm run build` | Builds the app for production to the `build` folder. |
+| `pnpm test` | Launches the Jest test runner. |
+| `pnpm run deploy` | Deploys the application to GitHub Pages. |
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 pramuditha_cv/
 ├── public/                  # Static assets and entry HTML
-│   ├── cvImg.png            # CV Preview image
+│   ├── PramaCV.png          # CV Dashboard preview
+│   ├── cvImg.png            # Favicon and icons
 │   ├── index.html           # HTML template
 │   └── manifest.json        # Web App Manifest
 ├── src/                     # Source code
+│   ├── components/          # Admin UI and interactive components
+│   ├── data/                # Initial and fallback CV datasets
+│   ├── hooks/               # Custom data fetching and sync hooks
+│   ├── types/               # TypeScript type interfaces
+│   ├── utils/               # Cryptographic auth and helper functions
 │   ├── App.tsx              # Main CV logic and layout
 │   ├── index.tsx            # Application entry point
 │   ├── App.css              # Component-specific styles
