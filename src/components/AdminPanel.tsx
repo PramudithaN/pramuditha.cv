@@ -38,7 +38,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
 
   // GitHub sync states
   const [ghToken, setGhToken] = useState(
-    localStorage.getItem("gh_pat_token") || process.env.REACT_APP_GITHUB_TOKEN || ""
+    sessionStorage.getItem("gh_pat_token") || localStorage.getItem("gh_pat_token") || ""
   );
   const [ghOwner, setGhOwner] = useState(
     localStorage.getItem("gh_owner") || process.env.REACT_APP_GITHUB_OWNER || "PramudithaN"

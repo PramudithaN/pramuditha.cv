@@ -4,3 +4,7 @@ packages:
 allowBuilds:
   core-js: true
   core-js-pure: true
+
+overrides:
+  dompurify: "^3.2.4"
+  postcss-selector-parser: "^7.1.3"
