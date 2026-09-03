@@ -1,129 +1,144 @@
-# Digital-CV
+# Digital CV
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-> A professional digital CV designed to showcase my journey as a Software Engineering student and Associate Software Engineer, featuring a responsive design and PDF download functionality.
+> An interactive, responsive digital curriculum vitae web application built with React, TypeScript, and Tailwind CSS, featuring in-browser PDF export, dynamic data management, and cryptographic authentication.
 
 ---
 
-## 📸 Preview
+## Preview
 
-**CV Dashboard**
 ![Preview](public/PramaCV.png)
 
 ---
 
-## 📖 About This Project
+## Overview
 
-This project is a modern, interactive CV platform built with **React 19** and **TypeScript**. It serves as a comprehensive digital portfolio, highlighting my professional background, technical expertise, and academic achievements. The application is optimized for performance and accessibility, featuring a specialized export functionality that allows users to download a high-quality PDF version of the CV directly from their browser.
-
----
-
-## ✨ Features
-
-- 🔐 **Admin Management Panel** - In-browser and authenticated management of skills, experience, projects, and personal data.
-- 🔄 **Cloud & Local Sync** - Direct synchronization with GitHub and local JSON export/import.
-- 🚀 **Dynamic Profile** - Interactive presentation of professional experience and skills.
-- 🎨 **Modern UI/UX** - Clean, professional aesthetic built with Tailwind CSS.
-- 🌙 **Responsive Design** - Fully optimized for seamless viewing on mobile, tablet, and desktop.
-- 📄 **PDF Export** - Instant, high-quality PDF generation using `jsPDF` and `html2canvas`.
-- 🔍 **Interactive Contact** - One-click access to GitHub, LinkedIn, and Email.
-- 💼 **Career Timeline** - Detailed tracking of professional roles and academic history.
+This application serves as a centralized digital resume and portfolio platform. It provides a modern, high-contrast user interface showcasing professional experience, technical competencies, project portfolios, and academic credentials. The system includes an administrative console with client-side SHA-256 authentication for managing CV datasets and synchronization with remote repository storage.
 
 ---
 
-## 🛠️ Tech Stack
+## Key Features
+
+- **Dynamic Data Management**: Authenticated administrative dashboard to edit personal details, technical skill categories, employment history, projects, and education.
+- **Data Synchronization & Backup**: Direct JSON export/import and GitHub repository content synchronization.
+- **Client-Side PDF Generation**: High-fidelity vector/canvas PDF export using `jsPDF` and `html2canvas` with interactive clickable hyperlinks.
+- **Responsive Architecture**: Fully responsive grid and flex layouts optimized across desktop, tablet, and mobile displays.
+- **Security & Integrity**: Session-based administrative authorization with SHA-256 cryptographic password hashing and decoupled credential handling.
+- **Automated Testing & Type Safety**: Comprehensive TypeScript type definitions and Jest unit test coverage for core utilities and data models.
+
+---
+
+## Technology Stack
 
 | Layer | Technology |
-|-------|-----------|
-| Framework | [React v19.0.0](https://reactjs.org/) |
-| Language | [TypeScript v4.9.5](https://www.typescriptlang.org/) |
-| Styling | [Tailwind CSS v3.3.3](https://tailwindcss.com/) |
-| Icons | [Lucide React v0.477.0](https://lucide.dev/) |
-| PDF Generation | [jsPDF v3.0.0](https://github.com/parallax/jsPDF) |
-| Deployment | [GitHub Pages](https://pages.github.com/) |
+|---|---|
+| Frontend Framework | [React 19](https://reactjs.org/) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) / PostCSS |
+| Icons | [Lucide React](https://lucide.dev/) |
+| PDF Export Engine | [jsPDF](https://github.com/parallax/jsPDF) & [html2canvas](https://html2canvas.hertzen.com/) |
+| Testing Framework | [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/) |
+| Deployment | [GitHub Pages](https://pages.github.com/) / GitHub Actions |
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
-- [Node.js](https://nodejs.org/) **v18.0.0 or higher**
-- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/) version 18.0.0 or higher
+- [pnpm](https://pnpm.io/) package manager (or npm)
 - [Git](https://git-scm.com/)
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/PramudithaN/pramuditha_cv.git
+git clone https://github.com/PramudithaN/pramuditha.cv.git
 cd pramuditha_cv
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 pnpm install
 ```
 
-### 3. Start the development server
+### 3. Start Development Server
 
 ```bash
 pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+The application will be available at `http://localhost:3000`.
 
 ---
 
-## 📦 Available Scripts
+## Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm start` | Runs the app in development mode. |
-| `pnpm run build` | Builds the app for production to the `build` folder. |
-| `pnpm test` | Launches the Jest test runner. |
-| `pnpm run deploy` | Deploys the application to GitHub Pages. |
+| Script | Purpose |
+|---|---|
+| `pnpm start` | Runs the development server on `http://localhost:3000`. |
+| `pnpm run build` | Builds an optimized production bundle in the `build/` directory. |
+| `pnpm test` | Executes the Jest unit test suite. |
+| `pnpm run deploy` | Builds and deploys the production bundle to GitHub Pages. |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 pramuditha_cv/
-├── public/                  # Static assets and entry HTML
-│   ├── PramaCV.png          # CV Dashboard preview
-│   ├── cvImg.png            # Favicon and icons
-│   ├── index.html           # HTML template
-│   └── manifest.json        # Web App Manifest
-├── src/                     # Source code
-│   ├── components/          # Admin UI and interactive components
-│   ├── data/                # Initial and fallback CV datasets
-│   ├── hooks/               # Custom data fetching and sync hooks
-│   ├── types/               # TypeScript type interfaces
-│   ├── utils/               # Cryptographic auth and helper functions
-│   ├── App.tsx              # Main CV logic and layout
-│   ├── index.tsx            # Application entry point
-│   ├── App.css              # Component-specific styles
-│   └── index.css            # Global Tailwind directives
-├── tailwind.config.js       # Styling configuration
-├── tsconfig.json            # TypeScript configuration
-└── package.json             # Project dependencies and scripts
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # CI/CD GitHub Pages deployment workflow
+├── public/
+│   ├── PramaCV.png           # Preview media asset
+│   ├── cvImg.png             # Favicon asset
+│   ├── index.html            # Application entry HTML template
+│   └── manifest.json         # Web application manifest
+├── src/
+│   ├── components/           # Reusable UI and administrative components
+│   │   ├── AdminAuthModal.tsx
+│   │   ├── AdminPanel.tsx
+│   │   └── AdminToggle.tsx
+│   ├── data/                 # Datasets, defaults, and integrity test suites
+│   │   ├── __tests__/
+│   │   ├── cv-data.json
+│   │   └── defaultCV.ts
+│   ├── hooks/                # Custom React state and data synchronization hooks
+│   │   └── useCVData.ts
+│   ├── types/                # TypeScript interface declarations
+│   │   └── cv.ts
+│   ├── utils/                # Authentication, hashing, and helper utilities
+│   │   ├── __tests__/
+│   │   └── auth.ts
+│   ├── App.css               # Application-level styling
+│   ├── App.tsx               # Main layout and PDF rendering logic
+│   ├── index.css             # Tailwind CSS directives
+│   ├── index.tsx             # React root mounting point
+│   └── setupTests.ts         # Jest and DOM test environment configuration
+├── pnpm-workspace.yaml       # Workspace dependencies and overrides
+├── tailwind.config.js        # Tailwind CSS configuration
+├── tsconfig.json             # TypeScript compiler settings
+└── package.json              # Project dependencies and script declarations
 ```
 
 ---
 
-## 🙋‍♂️ Connect with Me
+## Contact
 
 - **GitHub**: [github.com/PramudithaN](https://github.com/PramudithaN)
 - **LinkedIn**: [linkedin.com/in/pramuditha-nadun-612b1b204](https://linkedin.com/in/pramuditha-nadun-612b1b204)
-- **Email**: pramudithanadun@gmail.com
+- **Email**: [pramudithanadun@gmail.com](mailto:pramudithanadun@gmail.com)
 
 ---
 
-*Developed with ❤️ by Pramuditha Nadun.*
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
