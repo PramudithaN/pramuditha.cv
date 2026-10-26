@@ -1,4 +1,5 @@
 import { defaultCVData } from "../defaultCV";
+import cvData from "../cv-data.json";
 
 describe("defaultCV data integrity", () => {
   it("should contain valid personalInfo structure", () => {
@@ -50,5 +51,25 @@ describe("defaultCV data integrity", () => {
       expect(edu.school).toBeTruthy();
       expect(edu.year).toBeTruthy();
     });
+  });
+
+  it("should reflect the current CV work history and projects", () => {
+    expect(defaultCVData.personalInfo.title).toBe("SOFTWARE ENGINEER");
+    expect(defaultCVData.experience.map((item) => item.role)).toEqual([
+      "Software Engineer",
+      "Associate Software Engineer",
+      "Software Engineering Intern",
+    ]);
+    expect(defaultCVData.projects.map((item) => item.title)).toEqual([
+      "Fusion X Core Banking System",
+      "11LabsM - Neural Voice Synthesizer & Translator",
+      "FraudVista - Fraud Transaction Detection System",
+      "Brent Crude Oil Forecasting System",
+    ]);
+    expect(defaultCVData.education).toHaveLength(2);
+  });
+
+  it("should keep the published CV data in sync with the fallback", () => {
+    expect(cvData).toEqual(defaultCVData);
   });
 });

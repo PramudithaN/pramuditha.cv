@@ -1,99 +1,141 @@
 {
   "personalInfo": {
     "name": "PRAMUDITHA NADUN",
-    "title": "ASSOCIATE SOFTWARE ENGINEER",
-    "intro": "Associate Software Engineer with 5 years of combined academic and professional experience building scalable applications, highly interactive frontends, and robust backend systems. Specializing in React, TypeScript, and Spring Boot, with a strong foundation in UI/UX and visual design. Adept at bridging the gap between technical architecture and modern user experience, utilizing CI/CD pipelines to ensure seamless deployments. Proven experience in developing complex, data-driven architectures, distributed asynchronous systems, and predictive modeling algorithms.",
+    "title": "SOFTWARE ENGINEER",
+    "intro": "Software Engineer with 4+ years of experience at LOLC Technologies, building enterprise web applications for the Fusion X lending and core banking platform. Full stack developer specialising in React, TypeScript and Spring Boot, with hands-on experience in REST APIs, permissions and access control, CI/CD pipelines, Docker and UI/UX design in Figma. Also builds distributed asynchronous systems and machine learning forecasting models. Works in Agile/Scrum teams and focuses on secure, scalable, user-centric solutions.",
     "email": "pramudithanadun@gmail.com",
     "github": "github.com/PramudithaN",
     "linkedin": "linkedin.com/in/pramuditha-nadun-612b1b204",
-    "phone": "+94-713-052-556",
-    "address": "63/9,Gallage Mawatha, Mirihana, Nugegoda",
+    "phone": "+94 71 305 2556",
+    "address": "Nugegoda, Sri Lanka",
     "image": "https://avatars.githubusercontent.com/u/79605208?v=4"
   },
   "technicalSkills": [
     {
       "id": "skill-1",
       "category": "Frontend",
-      "skills": "React, TypeScript, JavaScript, React Hooks & Forms, Redux, Ant Design (AntD), HTML, CSS"
+      "skills": "React.js, Next.js, TypeScript, JavaScript, Redux, Context API, React Hooks, React Forms, Ant Design (AntD), Tailwind CSS, HTML, CSS, SSR/SSG, Responsive Design"
     },
     {
       "id": "skill-2",
-      "category": "Backend & Databases",
-      "skills": "Spring Boot, Java, FastAPI, Python, PostgreSQL, Oracle Forms, Jasper Reports"
+      "category": "Backend",
+      "skills": "Java, Spring Boot, FastAPI, Python, RESTful APIs, JWT, OAuth, Role-Based Access Control, Oracle Forms, Jasper Reports"
     },
     {
       "id": "skill-3",
-      "category": "DevOps & Infrastructure",
-      "skills": "Docker, Git (commands & tagging), Jenkins, ArgoCD, Celery, Redis, AWS S3 / MinIO"
+      "category": "Databases & Caching",
+      "skills": "PostgreSQL, Oracle, Redis"
     },
     {
       "id": "skill-4",
-      "category": "Design & UI/UX",
-      "skills": "Figma, Wireframing, Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro, After Effects)"
+      "category": "DevOps & Tools",
+      "skills": "Docker, Docker Compose, Git, Jenkins, ArgoCD, CI/CD"
     },
     {
       "id": "skill-5",
-      "category": "Data & Analytics",
+      "category": "Design",
+      "skills": "Figma, Wireframing, Prototyping, Adobe Photoshop, Illustrator, Premiere Pro, After Effects"
+    },
+    {
+      "id": "skill-6",
+      "category": "Data & ML",
       "skills": "XGBoost, GRU, ARIMA, Variational Mode Decomposition (VMD), FinBERT"
+    },
+    {
+      "id": "skill-7",
+      "category": "Practices",
+      "skills": "Agile/Scrum, Performance Optimisation, Security Best Practices"
     }
   ],
   "experience": [
     {
       "id": "exp-1",
-      "role": "Associate Software Engineer (Fusion X Team)",
-      "company": "LOLC Technologies",
-      "period": "Hybrid | 2024 - Present",
+      "role": "Software Engineer",
+      "company": "LOLC Technologies | Fusion X Team",
+      "period": "Colombo, Sri Lanka (Hybrid) | 2024 - Present",
       "description": [
-        "Develop and maintain enterprise-scale web applications using React and TypeScript, leveraging Redux for state management and Ant Design for modern, responsive UI components.",
-        "Architect and optimize backend functionalities using Spring Boot, ensuring efficient data processing, secure user access control, and precise screen permissions.",
-        "Streamline deployment lifecycles across QA, UAT, and Production environments by actively managing and monitoring CI/CD pipelines via Jenkins and ArgoCD.",
-        "Bridge technical and design workflows by conceptualizing and refining user interfaces in Figma, directly elevating the overall user experience and application usability."
+        "Develop and maintain enterprise-scale web applications using React and TypeScript, with Redux for state management and Ant Design for responsive UI components.",
+        "Architect and optimise backend functionality in Spring Boot, ensuring efficient data processing, secure user access control and precise screen-level permissions.",
+        "Manage and monitor CI/CD pipelines through Jenkins and ArgoCD to streamline deployments across QA, UAT and Production environments.",
+        "Bridge engineering and design by conceptualising and refining interfaces in Figma, improving overall usability."
       ]
     },
     {
       "id": "exp-2",
-      "role": "Trainee Software Engineer (Fusion Team)",
-      "company": "LOLC Technologies",
-      "period": "Hybrid | Mar 2022 - Oct 2024",
+      "role": "Associate Software Engineer",
+      "company": "LOLC Technologies | Fusion X Team",
+      "period": "Colombo, Sri Lanka (Hybrid) | 2023 - 2024",
       "description": [
-        "Engineered interactive frontend components and responsive layouts, collaborating with cross-functional teams to translate business requirements into functional software solutions.",
         "Maintained and developed backend processes and reporting systems using Java and Oracle Forms.",
-        "Designed and generated complex, data-driven dashboards utilizing Jasper Reports to facilitate high-level business decision-making.",
-        "Contributed heavily to the UI/UX team, transforming user journeys into actionable Figma wireframes and high-fidelity designs."
+        "Designed and generated complex, data-driven dashboards using Jasper Reports to facilitate high-level business decision-making."
+      ]
+    },
+    {
+      "id": "exp-3",
+      "role": "Software Engineering Intern",
+      "company": "LOLC Technologies | Fusion X Team",
+      "period": "Colombo, Sri Lanka (Hybrid) | 2022 - 2023",
+      "description": [
+        "Engineered and developed interactive frontend components and responsive layouts, collaborating with cross-functional teams to translate business requirements into functional software solutions.",
+        "Developed data-driven reports and investigated, identified, and fixed application bugs and defects across enterprise modules to improve system stability."
       ]
     }
   ],
   "projects": [
     {
       "id": "proj-1",
-      "title": "11LabsM - Neural Voice Synthesizer & Translator",
-      "repo": "https://github.com/PramudithaN/11labsM.git",
-      "tech": "React, FastAPI, Celery, Redis, PostgreSQL, Docker",
+      "title": "Fusion X Core Banking System",
+      "tech": "React, TypeScript, Redux, Spring Boot, Java",
       "description": [
-        "Architected a distributed full-stack platform that simultaneously translates and synthesizes speech into 17+ languages utilizing the ElevenLabs, DeepL, and Google APIs.",
-        "Orchestrated asynchronous background task processing using Celery and Redis to handle heavy text-to-speech workloads, providing users with real-time progress tracking.",
-        "Engineered a SHA-256 content-addressed caching mechanism and integrated scalable object storage (MinIO/AWS S3) to significantly minimize external API costs and reduce response latency.",
-        "Containerized the complete application infrastructure including the API, workers, cache, and database using Docker Compose for streamlined deployment."
+        "Built React forms and form schemas for core banking workflows, and handled core banking business logic across the application.",
+        "Implemented REST APIs and managed user permissions and access control at screen and feature level.",
+        "Maintained UI design standards and held ownership of frontend modules across the Fusion X platform."
       ]
     },
     {
       "id": "proj-2",
+      "title": "11LabsM - Neural Voice Synthesizer & Translator",
+      "repo": "https://github.com/PramudithaN/11labsM.git",
+      "tech": "React, FastAPI, Redis, PostgreSQL, Docker",
+      "description": [
+        "Architected a distributed full-stack platform that translates and synthesises speech into 17+ languages using the ElevenLabs, DeepL and Google APIs.",
+        "Orchestrated asynchronous background processing for text-to-speech workloads using Redis, giving users real-time progress tracking.",
+        "Implemented SHA-256 content-addressed caching to reduce external API costs and response latency.",
+        "Containerised the API, workers, cache and database with Docker Compose for streamlined deployment."
+      ]
+    },
+    {
+      "id": "proj-3",
+      "title": "FraudVista - Fraud Transaction Detection System",
+      "tech": "React, TypeScript, Ant Design, Tailwind CSS, Redux",
+      "description": [
+        "Built a React platform for detecting and monitoring fraudulent financial transactions, with secure API integration and real-time data visualisation.",
+        "Managed complex workflows with Redux and Context API and delivered responsive dashboards with actionable fraud-prevention insights."
+      ]
+    },
+    {
+      "id": "proj-4",
       "title": "Brent Crude Oil Forecasting System",
       "repo": "https://github.com/PramudithaN/petrocast-frontend.git",
-      "tech": "Python, XGBoost, GRU, ARIMA, VMD",
+      "tech": "Python, XGBoost, GRU, ARIMA, VMD, FinBERT",
       "description": [
-        "Engineered a leakage-free ensemble machine learning model to execute a 5-day price prediction horizon for the crude oil market.",
-        "Implemented Variational Mode Decomposition (VMD) to analyze and visualize non-linear frequency signals and Intrinsic Mode Functions (IMFs).",
-        "Integrated natural language processing via FinBERT, strictly utilizing event-driven, lagged news sentiment to eliminate forward-filling data leakage."
+        "Engineered a leakage-free ensemble machine learning model for a 5-day crude oil price prediction horizon.",
+        "Applied Variational Mode Decomposition to analyse non-linear frequency signals, and FinBERT sentiment analysis using strictly event-driven, lagged news data."
       ]
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "degree": "BSc (Hons) Software Engineering (Upper Second Honors)",
-      "school": "University of Westminster, UK",
-      "year": "Feb 2022 - 2026"
+      "degree": "BSc (Hons) Software Engineering (Upper Second Class)",
+      "school": "University of Westminster, UK (delivered via Informatics Institute of Technology, Colombo)",
+      "year": "2022 - 2026"
+    },
+    {
+      "id": "edu-2",
+      "degree": "G.C.E. Advanced Level - Physical Science / Mathematics Stream",
+      "school": "Mahinda College, Galle",
+      "year": "2019"
     }
   ]
 }

@@ -77,6 +77,8 @@ pnpm start
 
 The application will be available at `http://localhost:3000`.
 
+Optional GitHub sync defaults can be set with `VITE_GITHUB_OWNER` and `VITE_GITHUB_REPO` in `.env.local`. These are public client-side values; never put access tokens or other secrets in `VITE_` variables.
+
 ---
 
 ## Available Scripts

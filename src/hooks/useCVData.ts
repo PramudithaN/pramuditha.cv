@@ -3,7 +3,9 @@ import { CVData } from "../types/cv";
 import { defaultCVData } from "../data/defaultCV";
 import { Octokit } from "@octokit/rest";
 
-const STORAGE_KEY = "pramuditha_cv_custom_data_v2";
+const STORAGE_KEY = import.meta.env.DEV
+  ? "pramuditha_cv_custom_data_dev_v1"
+  : "pramuditha_cv_custom_data_v2";
 const GITHUB_RAW_URL = "https://raw.githubusercontent.com/PramudithaN/pramuditha.cv/main/src/data/cv-data.json";
 
 export function useCVData() {
@@ -23,6 +25,8 @@ export function useCVData() {
 
   // Automatically fetch the latest published data from GitHub on load
   useEffect(() => {
+    if (import.meta.env.DEV) return;
+
     let isMounted = true;
 
     const fetchLatestFromGitHub = async () => {

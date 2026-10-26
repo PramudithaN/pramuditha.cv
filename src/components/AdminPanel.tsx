@@ -41,10 +41,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     sessionStorage.getItem("gh_pat_token") || localStorage.getItem("gh_pat_token") || ""
   );
   const [ghOwner, setGhOwner] = useState(
-    localStorage.getItem("gh_owner") || process.env.REACT_APP_GITHUB_OWNER || "PramudithaN"
+    localStorage.getItem("gh_owner") || import.meta.env.VITE_GITHUB_OWNER || "PramudithaN"
   );
   const [ghRepo, setGhRepo] = useState(
-    localStorage.getItem("gh_repo") || process.env.REACT_APP_GITHUB_REPO || "pramuditha.cv"
+    localStorage.getItem("gh_repo") || import.meta.env.VITE_GITHUB_REPO || "pramuditha.cv"
   );
   const [isSyncing, setIsSyncing] = useState(false);
 
